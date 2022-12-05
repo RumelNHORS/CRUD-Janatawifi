@@ -40,7 +40,3 @@ def delete_data(request, id):
         return HttpResponseRedirect('/')
 
 
-#This is Model to JSON View Function
-def JsonView(request):
-    data = list(User.objects.values())
-    return JsonResponse(data, safe=False)
