@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from . forms import CustomerRegistrationForm
 from django.contrib import messages
-from . models import User
+from . models import User, JsonModel
 from django.http import JsonResponse
 import json
 from django.views.generic import ListView
@@ -39,4 +39,7 @@ def delete_data(request, id):
         de.delete()
         return HttpResponseRedirect('/')
 
-
+#This is Model to JSON View Function
+def JsonView(request):
+    data = list(JsonModel.objects.values())
+    return JsonResponse(data, safe=False)

@@ -1,0 +1,2 @@
+This project for my Task on JanataWifi
+here i havce Created two commit named sqlModel and  jsonModel
